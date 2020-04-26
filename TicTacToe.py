@@ -10,6 +10,15 @@ def result(y) :
     elif [y.get(1), y.get(4), y.get(7)] == [p1, p1, p1]:
         flag = True
         print("Player1 wins")
+    elif [y.get(7), y.get(8), y.get(9)] == [p1, p1, p1]:
+        flag = True
+        print("Player1 wins")
+    elif [y.get(2), y.get(5), y.get(8)] == [p1, p1, p1]:
+        flag = True
+        print("Player1 wins")
+    elif [y.get(3), y.get(6), y.get(9)] == [p1, p1, p1]:
+        flag = True
+        print("Player1 wins")
     elif [y.get(1), y.get(5), y.get(9)] == [p1, p1, p1]:
         flag = True
         print("Player1 wins")
@@ -22,7 +31,16 @@ def result(y) :
     elif [y.get(4), y.get(5), y.get(6)] == [p2, p2, p2]:
         flag = True
         print("Player2 wins")
+    elif [y.get(7), y.get(8), y.get(9)] == [p2, p2, p2]:
+        flag = True
+        print("Player2 wins")
     elif [y.get(1), y.get(4), y.get(7)] == [p2, p2, p2]:
+        flag = True
+        print("Player2 wins")
+    elif [y.get(2), y.get(5), y.get(8)] == [p2, p2, p2]:
+        flag = True
+        print("Player2 wins")
+    elif [y.get(3), y.get(6), y.get(9)] == [p2, p2, p2]:
         flag = True
         print("Player2 wins")
     elif [y.get(1), y.get(5), y.get(9)] == [p2, p2, p2]:
@@ -60,10 +78,15 @@ print("player1 Choose location 1 ,2 ,3\n\t\t\t4, 5, 6\n\t\t\t...\n")
 
 #Actual program running the game
 
+use = [0]            #A little feature to not use the used spot
 for i in range(0, 5):
     if i == 5:
         break
     loc1 = int(input("Player1 enter the location\n"))
+    if loc1 in use:                                        #This line ensures single use
+        print("Location taken. Enter Another location\n")
+        continue
+    use.append(loc1)
     pos[loc1] = p1
     print("", pos[1]+ "  | "+pos[2]+" |  "+pos[3]+"\n",
           "------------\n",
@@ -76,6 +99,13 @@ for i in range(0, 5):
     if i == 4:
         continue
     loc2 = int(input("Player2 enter the location\n"))
+    if loc2 in use:
+        print("Location taken. Enter Another location\n")
+        loc2 = int(input(" Player2 Enter a valid position\n"))   # Ugly approach but could not figure out better way 
+        if loc2 in use:
+            print("Start again\n")
+            break
+    use.append(loc2)
     pos[loc2] = p2
     print("", pos[1]+ "  | "+pos[2]+" |  "+pos[3]+"\n",
           "------------\n",
