@@ -1,56 +1,35 @@
 #This function is to decide the winner 
-def result(y) :
+def result(y):
     flag = False
-    if [y.get(1), y.get(2), y.get(3)] == [p1, p1, p1]:
-        flag = True
-        print("Player1 wins")
-    elif [y.get(4), y.get(5), y.get(6)] == [p1, p1, p1]:
-        flag = True
-        print("Player1 wins")
-    elif [y.get(1), y.get(4), y.get(7)] == [p1, p1, p1]:
-        flag = True
-        print("Player1 wins")
-    elif [y.get(7), y.get(8), y.get(9)] == [p1, p1, p1]:
-        flag = True
-        print("Player1 wins")
-    elif [y.get(2), y.get(5), y.get(8)] == [p1, p1, p1]:
-        flag = True
-        print("Player1 wins")
-    elif [y.get(3), y.get(6), y.get(9)] == [p1, p1, p1]:
-        flag = True
-        print("Player1 wins")
+    if [y.get(1), y.get(5), y.get(9)] == [p2, p2, p2]:
+            flag = True
+            print("Player2 wins")
     elif [y.get(1), y.get(5), y.get(9)] == [p1, p1, p1]:
-        flag = True
-        print("Player1 wins")
+            flag = True
+            print("Player1 wins")
     elif [y.get(3), y.get(5), y.get(7)] == [p1, p1, p1]:
-        flag = True
-        print("Player1 wins")
-    elif [y.get(1), y.get(2), y.get(3)] == [p2, p2, p2]:
-        flag = True
-        print("Player2 wins")
-    elif [y.get(4), y.get(5), y.get(6)] == [p2, p2, p2]:
-        flag = True
-        print("Player2 wins")
-    elif [y.get(7), y.get(8), y.get(9)] == [p2, p2, p2]:
-        flag = True
-        print("Player2 wins")
-    elif [y.get(1), y.get(4), y.get(7)] == [p2, p2, p2]:
-        flag = True
-        print("Player2 wins")
-    elif [y.get(2), y.get(5), y.get(8)] == [p2, p2, p2]:
-        flag = True
-        print("Player2 wins")
-    elif [y.get(3), y.get(6), y.get(9)] == [p2, p2, p2]:
-        flag = True
-        print("Player2 wins")
-    elif [y.get(1), y.get(5), y.get(9)] == [p2, p2, p2]:
-        flag = True
-        print("Player2 wins")
+            flag = True
+            print("Player1 wins")
     elif [y.get(3), y.get(5), y.get(7)] == [p2, p2, p2]:
-        flag = True
-        print("Player2 wins")
+            flag = True
+            print("Player2 wins")
+    for _ in range(0,9,3):
+        if [y.get(_+1), y.get(_+2), y.get(_+3)] == [p1, p1, p1]:
+            flag = True
+            print("Player1 wins")
+        elif [y.get(_+1), y.get(_+2), y.get(_+3)] == [p2, p2, p2]:
+            flag = True
+            print("player2 wins")
+    for _ in range(3):
+        if [y.get(_+1), y.get(_+4), y.get(_+7)] == [p1, p1, p1]:
+            flag = True
+            print("Player1 wins")
+        elif [y.get(_+1), y.get(_+4), y.get(_+7)] == [p2, p2, p2]:
+            flag = True
+            print("Player2 wins")
+        
     return flag
-
+    
 #Declaring the dict and creating the "graphical" formal of the game
 
 pos = {1: '-', 2: '-', 3: '-', 4: '-', 5: '-', 6: '-', 7: '-', 8: '-', 9: '-'}
