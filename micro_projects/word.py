@@ -18,6 +18,9 @@ def possible_words(words, charSet):  #This function checks is the word is possib
             if charSet.count(key) != chars[key]: 
                 flag = 0
         if flag == 1: 
-            print(i) 
-
+            print(i)
+            
+input = ['go', 'bat', 'me', 'eat', 'toss', 'craft', 'lift', 'goal', 'dog', 'boy', 'run', 'bomb', 'ball', 'tell'] 
+charSet = ['e', 'o', 'b', 'a', 'm', 'g', 'l'] 
+possible_words(input, charSet) 
  
