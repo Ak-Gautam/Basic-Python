@@ -1,7 +1,7 @@
 #This program takes a list of words and a list of letters as input and find the words that can be formed using the letters .
 #A character can't appear twice consecutively but can appear twice in the same word. i.e. Ball: wrong  Bomb:correct
 
-def charCount(i):  #this function counts the number of times the word has appeared and creates a dictionary based on it.
+def charCount(i):  #this function counts the number of times the char has appeared and creates a dictionary based on it.
     dict = {} 
     for j in i: 
         dict[i] = dict.get(j, 0) + 1
