@@ -1,9 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ### Basic data_structures in python
-
-# In[24]:
+# Basic data_structures in python
 
 
 #List
@@ -17,9 +12,6 @@ list1.extend((2,0))
 print(list1)
 
 
-# In[25]:
-
-
 a = list1.pop(3)
 print(a)
 print(list1)
@@ -28,9 +20,6 @@ print(list1)
 del list1[1]
 print(list1)
 print(list1.index("Gautam"))
-
-
-# In[47]:
 
 
 list2 = [0, 0.5, 2, 3, 'a', "Gautam", 9, 7]
@@ -42,8 +31,6 @@ print(list2[::-1])
 print(list2[0:7:2])
 
 
-# In[53]:
-
 
 list3 = [2, 6, 4, 82, 21, 786]
 print(list3)
@@ -52,8 +39,6 @@ print(sorted(list3))
 list3.sort(reverse=True)
 print(list3)
 
-
-# In[56]:
 
 
 #Tuple
@@ -64,7 +49,6 @@ print(tuple1)
 #Can add but can't substract
 
 
-# In[5]:
 
 
 #Dictionary
@@ -82,9 +66,6 @@ print(dict1.values())
 print(dict1.keys())
 
 
-# In[78]:
-
-
 #Sets
 set1 = {1, 2, 3, 3, 4, 4, 4, 6}
 print(set1)
@@ -95,10 +76,3 @@ print(set1.union(set2))
 print(set1.intersection(set2))
 print(set1.difference(set2))
 print(set1.symmetric_difference(set2))
-
-
-# In[ ]:
-
-
-
-
