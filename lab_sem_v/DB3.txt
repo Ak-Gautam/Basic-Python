@@ -1,0 +1,33 @@
+3. insertintotextvalues(2953,'dbms','penguin','elamsri');
+
+insertintobookadoptionvalues(11,5,2953);
+
+4. selectdistinct(c.cno),t.book_isbn,t.book_title
+
+fromcoursec,textt,bookadoptionb
+
+wherec.cno=b.cnoandb.book_isbn=t.book_isbnandc.dept='CS'
+
+andc.cnoin(selectcno
+
+frombookadoption
+
+groupbycno
+
+havingcount(cno)>=2)
+
+orderbyc.cname;
+
+5. selectc.dept
+
+fromcoursec
+
+wherec.cno=any(selectb.cno
+
+frombookadoptionb
+
+whereb.book_isbn=any(selectt.book_isbn
+
+fromtextt
+
+wherepublisher='pearson'));
