@@ -1,0 +1,29 @@
+3. selectname,city,country
+
+fromauthor
+
+whereauthor_idin(selectauthor_id
+
+fromcatalog
+
+whereyear>2000andprice>(selectavg(price)
+
+fromcatalog)
+
+group by author_id
+
+havingcount(*)>2);
+
+4. SELECTname
+
+FROMauthora,catalogc
+
+WHEREa.author_id=c.author_idANDbook_idIN
+
+(SELECTbook_id
+
+FROMorder_detailsWHEREquantity=(SELECTMAX(quantity)FROMorder_details));
+
+5. update catalog set price=price+price*0.1wherecatalog.publisher_idin
+
+(selectpublisher_idfrompublisherwherepublisher_id='21')
