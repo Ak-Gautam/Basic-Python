@@ -1,0 +1,21 @@
+3.
+
+selectcnamefromdepositord,accounta
+
+where d.acc_no = a.acc_no and bname = 'smg'group by cname having
+
+count(d.acc_no)>=2;
+
+4.
+
+selectd.cnamefromdepositord,accounta,branchb
+
+whered.acc_no=a.acc_noanda.bname=b.bnameandb.bcity='shimoga'
+
+groupbyd.cnamehavingcount(distincta.bname)=(selectcount(distinctbname)
+
+frombranchwherebcity='shimoga');
+
+5.
+
+deletefromaccountwherebnamein(selectbnamefrombranchwherebcity='shimoga');
